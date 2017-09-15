@@ -29,7 +29,7 @@ import { Component, Input } from '@angular/core';
             width: 100%;
             min-width: 300px;
             margin-right: 2%;
-            padding: 10px;
+            padding: 20px;
         }
         
         :host:hover {
