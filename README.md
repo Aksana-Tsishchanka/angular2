@@ -1,7 +1,9 @@
 # angular2
 #SPA shows available courses
 
-in terminal:
+in terminal run:
+
 npm install
+
 npm run start
 
