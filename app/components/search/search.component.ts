@@ -6,10 +6,8 @@ import { Component } from '@angular/core';
         <div class="searchContainer">
             <input 
                     class="search"
-                    #search
                     type="text" 
                     placeholder="search for courses"
-                    [value]="value"
                     [(ngModel)]="value"
                     (ngModelChange)="getInputValue($event)"
             />
