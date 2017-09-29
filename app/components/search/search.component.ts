@@ -1,11 +1,18 @@
 import { Component } from '@angular/core';
 
-
 @Component({
     selector:    'search',
     template: `
         <div class="searchContainer">
-            <input class="search" type="text" placeholder="search for courses" />
+            <input 
+                    class="search"
+                    #search
+                    type="text" 
+                    placeholder="search for courses"
+                    [value]="value"
+                    [(ngModel)]="value"
+                    (ngModelChange)="getInputValue($event)"
+            />
             <div class="icon">
                 <icon-search></icon-search>
             </div>
@@ -45,5 +52,14 @@ import { Component } from '@angular/core';
 })
 
 export class SearchComponent {
+    private value = '';
 
+    public onEnter(value: string) {
+        this.value = value;
+        console.log(value);
+    }
+
+    public getInputValue() {
+        console.log(this.value);
+    }
 }
