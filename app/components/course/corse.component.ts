@@ -1,4 +1,5 @@
 import { Component, Input, EventEmitter, Output } from '@angular/core';
+import { Course } from '../../interfaces/corse.interface';
 
 @Component({
     selector:    'course',
@@ -82,8 +83,7 @@ import { Component, Input, EventEmitter, Output } from '@angular/core';
 })
 
 export class CourseComponent {
-    @Input() private course: { id: string, title: string,
-        dateOfCreating: string, duration: string, description: string};
+    @Input() private course: Course;
     @Output() private onEdit = new EventEmitter<string>();
     @Output() private onDelete = new EventEmitter<string>();
 

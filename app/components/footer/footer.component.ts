@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector:    'footer-component',
+    selector: 'footer-component',
     template: '<footer class="info">© 2017 Aksana Tolstoguzova</footer>',
     styles: [`
         .info {

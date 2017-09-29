@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Course } from '../../interfaces/corse.interface';
 
 const coursesInit = [
     {
@@ -60,8 +61,7 @@ const coursesInit = [
 
 export class CourseListComponent implements OnInit {
 
-    private courses: Array<{ id: string, title: string,
-        dateOfCreating: string, duration: string, description: string}>;
+    private courses: Course[];
     constructor() {
         this.courses = [];
     }
