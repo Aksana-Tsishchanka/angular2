@@ -9,10 +9,10 @@ import { Component } from '@angular/core';
                     type="text" 
                     placeholder="search for courses"
                     [(ngModel)]="value"
-                    (ngModelChange)="getInputValue($event)"
+                    (keyup.enter)="onEnter()"
             />
             <div class="icon">
-                <icon-search></icon-search>
+                <icon-search (click)="getInputValue()"></icon-search>
             </div>
         </div>
         `,
@@ -52,9 +52,8 @@ import { Component } from '@angular/core';
 export class SearchComponent {
     private value = '';
 
-    public onEnter(value: string) {
-        this.value = value;
-        console.log(value);
+    public onEnter() {
+        console.log(this.value);
     }
 
     public getInputValue() {

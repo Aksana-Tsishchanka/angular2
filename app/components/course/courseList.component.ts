@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Course } from '../../interfaces/corse.interface';
+import { Course } from '../../interfaces/course.interface';
 
 const coursesInit = [
     {

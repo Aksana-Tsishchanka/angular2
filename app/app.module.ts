@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CourseListComponent } from './components/course/courseList.component';
-import { CourseComponent } from './components/course/corse.component';
+import { CourseComponent } from './components/course/course.component';
 import { IconEditComponent } from './components/icon/iconEdit.component';
 import { IconDeleteComponent } from './components/icon/iconDelete.component';
 import { CommonButtonComponent } from './components/button/commonButton.component';
