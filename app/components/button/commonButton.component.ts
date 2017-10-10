@@ -39,6 +39,6 @@ import { Component, Input } from '@angular/core';
 })
 
 export class CommonButtonComponent {
-    @Input() type: string;
-    @Input() title: string;
+    @Input() private type: string;
+    @Input() private title: string;
 }

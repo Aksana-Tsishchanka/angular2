@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
+import { Course } from '../../interfaces/course.interface';
 
 @Component({
     selector:    'course',
@@ -17,13 +18,13 @@ import { Component, Input } from '@angular/core';
                 </div>
             </div>
             <div class="btnContainer">
-                <icon-edit></icon-edit>
-                <icon-delete></icon-delete>
+                <icon-edit (click)="edit()"></icon-edit>
+                <icon-delete (click)="delete()"></icon-delete>
             </div>
         </div>
     `,
     styles: [`
-        :host {
+        :host {  
             border: 1px solid #d5c9e2;
             margin-bottom: 2%;
             width: 100%;
@@ -82,5 +83,15 @@ import { Component, Input } from '@angular/core';
 })
 
 export class CourseComponent {
-    @Input() course:any
+    @Input() private course: Course;
+    @Output() private onEdit = new EventEmitter<string>();
+    @Output() private onDelete = new EventEmitter<string>();
+
+    public edit() {
+        this.onEdit.emit(this.course.id);
+    }
+
+    public delete() {
+        this.onDelete.emit(this.course.id);
+    }
 }

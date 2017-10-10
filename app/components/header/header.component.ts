@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector:    'header-component',
+    selector: 'header-component',
     template: `<h1 class="logo">
         <logo></logo>
         Courses
